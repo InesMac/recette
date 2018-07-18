@@ -1,0 +1,64 @@
+
+<footer >
+
+</footer>
+
+    <!--  Scripts-->
+    <script src="./app/assets/js/Chart.min.js"></script>
+    
+    <script> 
+            var ctx = document.getElementById('myChart').getContext('2d');
+            var chart = new Chart(ctx, {
+                // The type of chart we want to create
+                type: 'pie',
+            
+                // The data for our dataset
+                data: {
+                    labels: ["Cholestérol", "Glucide", "Proteines", "Magnesium", "Calcium",],
+                    datasets: [{
+                        label: "My First dataset",
+                        backgroundColor: 'rgb(255, 99, 132)',
+                        borderColor: 'rgb(255, 99, 132)',
+                        data: [20, 20, 20, 20, 20,],
+                        backgroundColor: [
+                        
+'#658525',
+'#86b86b',
+'#4e9525',
+'#5e8b6f',
+'#4bbb8b',
+'#307672'
+],
+borderColor: [
+'#658525',
+'#86b86b',
+'#4e9525',
+'#5e8b6f',
+'#4bbb8b',
+'#307672'
+],
+borderWidth: 1
+}]
+},
+options: {
+legend: {
+    display: true,
+  position: 'bottom',
+    labels: {
+        fontColor: '#333',
+    }
+}
+}
+});
+    </script>
+  
+        
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="./app/assets/js/jquery-ui.min.js"></script>	
+
+    <script src="./app/assets/js/search.js"></script>
+
+
+    	
+  
+    

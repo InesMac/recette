@@ -1,0 +1,169 @@
+@import 'reset.css';
+html{font-size: 62.5%;}
+body{height: 100vh;}
+header{height: 10vh;}
+/* Backgrounds & colors */
+.bg-white {background-color: #ffffff;}
+
+/* Heigth & width */
+.h100vh {height: 100vh;}
+.w70 {width: 70%;}
+
+.h400p{height:400px;}
+.w400p{width: 400px; }
+
+/*Margin and padding*/
+.mb40p {margin-bottom: 40px;}
+.mb200p {margin-bottom: 200px;}
+.mt60t {margin-top: 20px;}
+.mg0 {margin: 0%}
+
+.pd0 {padding: 0%}
+.pd5 {padding: 5%;}
+
+.overhidden {overflow: hidden;}
+
+/*Position*/
+.flex{display: flex;}
+.floatright {float: right;}
+.flex-end {justify-content: center; }
+.block{display: block;}
+
+
+/*Align et center*/
+.ai_center{align-items: center;}
+.center {margin: 0 auto;}
+.txt_center {text-align: center;}
+
+/* specifiques */
+.bgsection-1{background:url("img/banner2.png") no-repeat bottom center transparent;
+padding: 1600*757;
+
+}
+
+/*color*/
+.vert {color: #587719;}
+.gray {color: #666666;}
+.white {color: #ffffff;}
+.gris {color: #272727;}
+
+/*Fonts*/
+.Lusitana {font-family: 'Lusitana', serif;}
+.Julius {font-family: 'Julius Sans One', sans-serif;}
+
+.fs9 {font-size: 9rem;}
+.fs18{font-size: 1.8rem;}
+
+.bold { font-weight: bold;}
+.txt_dc {text-decoration: none;}
+
+
+
+
+
+/*Navbar*/
+ .list1 {list-style-type: none;}
+ul.topnav li a {padding: 8px 46px; }
+
+/*Effects*/
+
+ul.topnav li a:hover:not(.active) {background-color:#66891d;}
+ul.topnav li a.active {background-color: #587719;}
+ul.topnav li.right {float: right;}
+
+/*Responsive navbar*/
+@media screen and (max-width: 600px){
+    ul.topnav li.right, 
+    ul.topnav li {float: none;}
+}
+
+
+
+/*Effect example CSS moteur recherche*/
+
+/*general styles*/
+h1 {font-weight: normal; font-size: 36px; margin-bottom: 75px;}
+.fun-cube i {transform: scale(10); opacity: 0.1;}
+
+#cuboid {
+    width: 400px; margin: 0 auto;
+    /*this also makes #cuboid a container for absolutely positioned descendants*/
+    perspective: 1000px;
+}
+#cuboid form {
+    /*counter translate*/
+    transform: translateZ(-20px);
+    /*propogate 3d space for children*/
+    transform-style: preserve-3d;
+    /*prevent height collapse as children are absolutely positioned*/
+    height: 40px;
+    /*for smooth animations*/
+    transition: all 0.35s;
+}
+
+/*faces*/
+.cuboid-text {
+    /*each face will be 40px high*/
+    line-height: 40px; height: 40px;
+    background: hsl(80, 65.3%, 28.2%);
+}
+.loader {
+    background: hsl(80, 65.3%, 28.2%);
+    animation: phase 1s infinite;
+}
+/*Lets create a pulsating animation for the loader face*/
+@keyframes phase {
+    50% {background: hsl(80, 65.3%, 28.2%);}
+}
+#chercher {
+    background: white; outline: none; border: 0 none;
+    font: 25%; text-align: left; color: hsl(80, 65.3%, 28.2%);
+    display: block; width: 100%; padding: 0 10px;
+    box-sizing: border-box;
+}
+#submit {display: none;}
+
+.submit-icon, .reset-icon {
+    position: absolute; top: 0; right: 0;
+    color: rgba(0, 0, 0, 0.25);
+    line-height: 40px; padding: 0 10px;
+    /*smooth transitions when user activates input and types something*/
+    transition: all 0.5s;
+    /*to make the icons feel like buttons*/
+    cursor: pointer;
+}
+/*.active = when the user is typing something*/
+.submit-icon.active {color: hsl(80, 65.3%, 28.2%);}
+.reset-icon {color: rgba(255, 255, 255, 0.25); font-size: 14px;}
+
+#cuboid div {position: absolute; top: 0; left: 0; width: 100%;}
+/*3D transforms. Each face will be rotated in multiples of -90deg and moved 20px(half of their 40px height) out*/
+#cuboid div:nth-child(1) {transform: rotateX(0deg) translateZ(20px);}
+#cuboid div:nth-child(2) {transform: rotateX(-90deg) translateZ(20px);}
+#cuboid div:nth-child(3) {transform: rotateX(-180deg) translateZ(20px);}
+#cuboid div:nth-child(4) {transform: rotateX(-270deg) translateZ(20px);}
+
+/*the form will have 4 states/classes(default+3) for rotation*/
+#cuboid form:hover, 
+#cuboid form.ready {transform: translateZ(-20px) rotateX(90deg);}
+#cuboid form.loading {transform: translateZ(-20px) rotateX(180deg);}
+#cuboid form.complete {transform: translateZ(-20px) rotateX(270deg);}
+
+.d_flexcenter{
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+.graphique{
+    height: 40vh;
+    width: 40vh;
+}
+
+.h90vh{
+    height: 90vh;
+}
+.w50{
+    width: 50%;
+}

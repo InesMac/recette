@@ -1,0 +1,23 @@
+{% extends 'Layout/layout.html.twig' %}
+
+{% block title %}
+    {{ parent() }} - Contact
+{% endblock %}
+
+{% block content %}
+   
+
+    <section class="h90vh flex flex-end ai_center ">
+
+        <div class=" h90vh w50">
+                <p>Votre plat</p>
+        </div>
+
+        <div class=" h90vh w50">
+            <div class="h90vh graphique">
+                    <canvas id="myChart" width="300" height="300"></canvas>
+            </div>
+        </div>
+
+    </section>
+{% endblock %}
